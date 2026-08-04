@@ -3,12 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get a Quote - Intersteller Infotech</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Get a Custom Quote - Intersteller Infotech</title>
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0d1b2a 0%, #172b4d 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 80px;
+      background-color: #ffffff;
+      color: #0d1b2a;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      background: #0d1b2a;
+      color: #ff6b00;
+      border: 3px solid #ff6b00;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .logo h2 {
+      font-size: 1.4rem;
+      color: #0d1b2a;
+    }
+
+    .navbar nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #0d1b2a;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      color: #ff6b00;
+    }
+
+    /* Main Container - Centered Alignment */
+    .quote-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    /* Glassmorphism Card Design */
+    .quote-card {
+      background: rgba(30, 58, 95, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 45px;
+      border-radius: 16px;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .badge {
+      color: #ff6b00;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .quote-card h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .quote-card p {
+      color: #a0aec0;
+      margin-bottom: 35px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Form Layout */
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .form-group label {
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+      padding: 13px 16px;
+      border-radius: 8px;
+      border: 1px solid #2d4a6f;
+      background-color: #0d1b2a;
+      color: #ffffff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus, 
+    .form-group select:focus, 
+    .form-group textarea:focus {
+      border-color: #ff6b00;
+      box-shadow: 0 0 8px rgba(255, 107, 0, 0.4);
+    }
+
+    /* Custom Button */
+    .btn-submit {
+      background-color: #ff6b00;
+      color: #ffffff;
+      border: none;
+      padding: 15px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+    }
+
+    .btn-submit:hover {
+      background-color: #e05e00;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.5);
+    }
+
+    /* Responsive for Mobile */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .form-row {
+        flex-direction: column;
+      }
+      .quote-card {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header / Navigation -->
+  <!-- Top Navigation Bar -->
   <header class="navbar">
     <div class="logo">
       <span class="logo-icon">O</span>
@@ -22,15 +214,16 @@
     </nav>
   </header>
 
-  <!-- Quote Section -->
-  <section class="quote-container">
+  <!-- Centered Form Container -->
+  <main class="quote-wrapper">
     <div class="quote-card">
-      <span class="badge">Request a Estimate</span>
+      <span class="badge">Request an Estimate</span>
       <h1>Get a Custom Quote</h1>
-      <p>Fill out the form below to get a detailed project estimation for your organization.</p>
+      <p>Fill out the details below to receive a personalized quote for your project.</p>
 
       <form action="#" method="POST" class="quote-form">
-        <div class="form-group-row">
+        
+        <div class="form-row">
           <div class="form-group">
             <label for="fullname">Full Name</label>
             <input type="text" id="fullname" placeholder="John Doe" required>
@@ -41,10 +234,10 @@
           </div>
         </div>
 
-        <div class="form-group-row">
+        <div class="form-row">
           <div class="form-group">
-            <label for="org">Organization / Institution Name</label>
-            <input type="text" id="org" placeholder="School, College, or Company name" required>
+            <label for="org">Organization Name</label>
+            <input type="text" id="org" placeholder="School or Company Name" required>
           </div>
           <div class="form-group">
             <label for="service">Select Service</label>
@@ -53,13 +246,12 @@
               <option value="online-exam">Online Examination Platform</option>
               <option value="it-infrastructure">IT Infrastructure Setup</option>
               <option value="learning-system">Smarter Learning Systems</option>
-              <option value="custom">Custom Enterprise Solutions</option>
             </select>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="budget">Estimated Budget ($)</label>
+          <label for="budget">Estimated Budget</label>
           <select id="budget">
             <option value="small">$1,000 - $5,000</option>
             <option value="medium">$5,000 - $15,000</option>
@@ -68,14 +260,14 @@
         </div>
 
         <div class="form-group">
-          <label for="details">Project Requirements / Details</label>
-          <textarea id="details" rows="5" placeholder="Describe your project, expected scale, timeline, and specific needs..." required></textarea>
+          <label for="details">Project Requirements</label>
+          <textarea id="details" rows="4" placeholder="Describe your project, expected scale, timeline..." required></textarea>
         </div>
 
         <button type="submit" class="btn-submit">Submit Quote Request</button>
       </form>
     </div>
-  </section>
+  </main>
 
 </body>
 </html>
