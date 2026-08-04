@@ -252,11 +252,12 @@
 
         <div class="form-group">
           <label for="budget">Estimated Budget</label>
-          <select id="budget">
-            <option value="small">1,000 - 5,000</option>
-            <option value="medium">5,000 - 15,000</option>
-            <option value="large">15,000+</option>
-          </select>
+          <select id="budget" required>
+    <option value="" disabled selected>Select Your Budget Range</option>
+    <option value="basic">Basic version (5-8 pages): ₹15,000 - ₹30,000</option>
+    <option value="professional">Professional custom website: ₹40,000 - ₹80,000</option>
+    <option value="premium">Premium website: ₹80,000 - ₹2,00,000+</option>
+  </select>
         </div>
 
         <div class="form-group">
