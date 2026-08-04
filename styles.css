@@ -87,3 +87,144 @@ textarea{min-height:160px; resize:vertical}
   }
   .nav{position:relative}
 }
+/* ===========================
+   CONTACT PAGE
+=========================== */
+
+.contact-section{
+    background:#0f172a;
+    padding:80px 20px;
+}
+
+.contact-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.contact-left h2{
+    color:#fff;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.contact-left p{
+    color:#cbd5e1;
+    margin-bottom:35px;
+    line-height:28px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.info-box{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.info-box i{
+    width:60px;
+    height:60px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+}
+
+.info-box h4{
+    color:#fff;
+    margin:0 0 5px;
+}
+
+.info-box p{
+    margin:0;
+    color:#cbd5e1;
+}
+
+.contact-right{
+    background:#ffffff;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.contact-right form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-right input,
+.contact-right textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus{
+    border-color:#2563eb;
+}
+
+.contact-right textarea{
+    resize:none;
+}
+
+.contact-right button{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:16px;
+    font-size:17px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-right button:hover{
+    background:#1d4ed8;
+}
+
+.active{
+    color:#2563eb;
+}
+
+@media(max-width:900px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+.row{
+grid-template-columns:1fr;
+}
+
+.contact-left h2{
+font-size:34px;
+}
+
+.contact-right{
+padding:25px;
+}
+
+}
