@@ -246,3 +246,39 @@ body {
     padding: 15px 20px;
   }
 }
+/* Container Text & Headings Visibility Fix */
+.section {
+  color: #ffffff; /* Base text color white */
+}
+
+/* Eyebrow Label (Services Tag) */
+.eyebrow {
+  color: #ff6b00; /* Orange Accent Color */
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Main Heading (What we deliver) */
+main h2, 
+.section h2 {
+  color: #ffffff !important; /* Force text to be white */
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Service Card Titles (IT Infrastructure, Online Examination, etc.) */
+.card h3 {
+  color: #ffffff !important;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #a0aec0; /* Light gray for description */
+  font-size: 0.95rem;
+}
